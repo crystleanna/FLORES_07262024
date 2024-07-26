@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { UploadComponent } from './upload/upload.component';
 import { StreamComponent } from './stream/stream.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes, {enableTracing: true}  // <-- debugging purposes only
       ),

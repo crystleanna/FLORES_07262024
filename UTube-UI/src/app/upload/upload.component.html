@@ -1,1 +1,79 @@
-<p>upload works!</p>
+<!-- New Category Modal -->
+<ng-template #newCategoryModal let-modal>
+    <div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">New Category</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+
+    <div class="modal-body">
+		<div class="row">
+            <div class="col-sm-12">
+                <label for="title" class="form-label">Category name</label>
+                <input type="text" class="form-control" id="title" maxlength="160" required [(ngModel)]="tempCategory">
+                <div class="text-danger" *ngIf="hasTitleError">
+                  Please input a name.
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-success" (click)="saveCategory()">Add Category</button>
+	</div>
+</ng-template>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="card text-bg-light mb-3">
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-lg-7">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" maxlength="160" required [(ngModel)]="video.title">
+                            <div class="text-danger" *ngIf="hasTitleError">
+                              Please input a title.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-12 col-md-8 col-lg-7">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="3" maxlength="160" required [(ngModel)]="video.description"></textarea>
+                            <div class="text-danger" *ngIf="hasDescError">
+                              Please input a description.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-12 col-md-8 col-lg-7">
+                            <label for="formFile" class="form-label">Select File</label>
+                            <input class="form-control" type="file" id="formFile" accept=".mp4,.avi,.mov" (change)="onFileSelected($event)">
+                            <div class="text-danger" *ngIf="hasFileError">
+                              Please select a file.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-8 col-md-8 col-lg-7">
+                            <label for="category" class="form-label">Category</label>
+                            <select class="form-select" aria-label="Default select example" (change)="selectCategory($event)" [(ngModel)]="video.category">
+                                <option selected>-</option>
+                                <option *ngFor="let category of categories" value="{{ category }}">{{ category }}</option>
+                              </select>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-5 align-self-end mt-4">
+                            <button type="button" class="btn btn-success" (click)="showNewCategoryDialog()">New Category</button>
+                        </div>
+                    </div>
+                                
+                    <div class="row mt-4">
+                        <div class="col-sm-12 col-md-8 col-lg-7">
+                            <button type="button" class="btn btn-primary" (click)="upload()">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
