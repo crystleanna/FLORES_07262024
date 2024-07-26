@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'upload', component: UploadComponent},
-  {path: 'stream', component: StreamComponent}
+  {path: 'stream/:id', component: StreamComponent}
 ];
 
 @NgModule({

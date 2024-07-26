@@ -11,6 +11,7 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     var sampleVideo = new Video()
+    sampleVideo.id = 1
     sampleVideo.title = "Super Extra Long Title That Will Break The Layout"
     sampleVideo.description = "description"
     sampleVideo.thumbnail = "thumbnail"
