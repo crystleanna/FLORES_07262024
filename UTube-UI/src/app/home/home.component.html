@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let video of videos" class="col-sm-12 col-md-6 col-lg-3" style="margin-bottom: 20px;">
+            <a routerLink="/stream">
+                <div class="card" style="width: 256px;">
+                    <img ngbTooltip="{{ video.title }}" src="https://cdn.pixabay.com/photo/2016/11/29/12/13/fence-1869401_1280.jpg" class="card-img-top" alt="..." style="width: 256px; height: 256px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><span>{{ video.title }}</span></h5>
+                        <p class="card-text">{{ video.description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
