@@ -1,6 +1,10 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, TemplateRef, ViewChild } from '@angular/core';
 import { VideoPayload } from '../models/video-payload.model';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CategoryService } from '../service/category.service';
+import { Category } from '../models/category.model';
+import { VideoService } from '../service/video.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,9 +12,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './upload.component.html',
   styleUrl: './upload.component.scss'
 })
-export class UploadComponent {
+export class UploadComponent  implements AfterViewInit{
   video: VideoPayload = new VideoPayload()
-  categories: string[] = ["Animals", "Bikes", "Dogs"]
+  categories: Category[] = []
 
   @ViewChild("newCategoryModal")
   modalContent?: TemplateRef<any>;
@@ -21,7 +25,12 @@ export class UploadComponent {
 
   tempCategory = ""
 
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private router: Router,
+    private modalService: NgbModal, 
+    private categoryService: CategoryService,
+    private videoService: VideoService
+  ) {}
 
   upload() {
     this.hasTitleError = false
@@ -41,8 +50,25 @@ export class UploadComponent {
     if (this.hasTitleError || this.hasDescError || this.hasFileError)
       return
 
-      
+    this.videoService.postVideo(this.video)
+    .subscribe(data =>
+      this.redirect(data)
+      );
+
     console.log('payload file:', this.video);
+  }
+
+  redirect(data: any) {
+    console.log(data)
+
+    this.router.navigate([""]);
+  }
+
+  ngAfterViewInit(): void {
+    this.categoryService.getCategories()
+    .subscribe(data =>
+      this.categories = data
+      );
   }
 
   showNewCategoryDialog() {
@@ -68,7 +94,7 @@ export class UploadComponent {
 
     const reader = new FileReader();
       reader.onload = (e: any) => {
-        const base64String = e.target.result;        
+        const base64String = (e.target.result as string).split(',')[1];   
         this.video.file = base64String;
         this.video.fileName = file.name;
       };
@@ -77,7 +103,10 @@ export class UploadComponent {
 
   saveCategory() {
     if (this.tempCategory != "") {
-      this.categories.push(this.tempCategory)
+      var category = new Category();
+      category.id = 0;
+      category.categories = this.tempCategory;
+      this.categories.push(category)
       this.tempCategory = ""
       this.modalService.dismissAll()
     }

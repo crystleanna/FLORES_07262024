@@ -58,7 +58,7 @@
                             <label for="category" class="form-label">Category</label>
                             <select class="form-select" aria-label="Default select example" (change)="selectCategory($event)" [(ngModel)]="video.category">
                                 <option selected>-</option>
-                                <option *ngFor="let category of categories" value="{{ category }}">{{ category }}</option>
+                                <option *ngFor="let category of categories" value="{{ category.categories }}">{{ category.categories }}</option>
                               </select>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-5 align-self-end mt-4">
