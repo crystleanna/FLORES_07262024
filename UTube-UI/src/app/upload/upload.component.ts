@@ -70,6 +70,7 @@ export class UploadComponent {
       reader.onload = (e: any) => {
         const base64String = e.target.result;        
         this.video.file = base64String;
+        this.video.fileName = file.name;
       };
       reader.readAsDataURL(file);
   }

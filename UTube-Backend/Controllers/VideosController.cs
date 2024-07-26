@@ -34,7 +34,7 @@ namespace UTube_Backend.Controllers
 
         // GET: api/Videos/5
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<Video>> GetVideo(int id)
+        public async Task<ActionResult> GetVideo(int id)
         {
             if (_context.Video == null)
             {
@@ -47,7 +47,12 @@ namespace UTube_Backend.Controllers
                 return NotFound();
             }
 
-            return video;
+            var fileBytes = System.IO.File.ReadAllBytes(video.url);
+
+
+            var extension = Path.GetExtension(video.url);
+            return File(fileBytes, "application/octet-stream", video.title + extension);
+
         }
 
         // POST: api/Videos

@@ -10,6 +10,8 @@ import { switchMap } from 'rxjs/operators';
 })
 export class StreamComponent implements OnInit {
 
+  streamUrl = ""
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -18,11 +20,8 @@ export class StreamComponent implements OnInit {
       switchMap((params: ParamMap) =>
         of(params.get('id'))
       )
-    ).subscribe(d => 
-      console.log("id: " + d));
-  }
-
-  jc() {
-
+    ).subscribe(id => 
+      this.streamUrl = "https://localhost:7092/api/Videos/" + id
+      );
   }
 }

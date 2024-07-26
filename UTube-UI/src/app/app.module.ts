@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +9,7 @@ import { UploadComponent } from './upload/upload.component';
 import { StreamComponent } from './stream/stream.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
       ),
     NgbModule
   ],
-  providers: [],
+  providers: [importProvidersFrom(HttpClientModule)],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

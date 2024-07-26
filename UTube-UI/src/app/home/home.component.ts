@@ -1,5 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Video } from '../models/video.model';
+import { VideoService } from '../service/video.service';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +10,14 @@ import { Video } from '../models/video.model';
 export class HomeComponent implements AfterViewInit {
   videos: Video[] = []
 
+  constructor(private videoService: VideoService) {}
+
   ngAfterViewInit(): void {
-    var sampleVideo = new Video()
-    sampleVideo.id = 1
-    sampleVideo.title = "Super Extra Long Title That Will Break The Layout"
-    sampleVideo.description = "description"
-    sampleVideo.thumbnail = "thumbnail"
-    sampleVideo.url = "url"
-    
-    this.videos = [sampleVideo, sampleVideo, sampleVideo, sampleVideo]
+    this.videoService.getVideos()
+    .subscribe(data => 
+        this.videos = data
+      );
+
   }
 }
 
