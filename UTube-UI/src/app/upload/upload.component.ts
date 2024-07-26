@@ -22,6 +22,7 @@ export class UploadComponent  implements AfterViewInit{
   hasTitleError = false
   hasDescError = false
   hasFileError = false
+  hasCategoryError = false
 
   tempCategory = ""
 
@@ -36,6 +37,7 @@ export class UploadComponent  implements AfterViewInit{
     this.hasTitleError = false
     this.hasDescError = false
     this.hasFileError = false
+    this.hasCategoryError = false
 
     if (this.video.title == null || this.video.title == "") {
       this.hasTitleError = true
@@ -45,6 +47,9 @@ export class UploadComponent  implements AfterViewInit{
     }
     if (this.video.file == null || this.video.file == "") {
       this.hasFileError = true
+    }
+    if (this.video.category == null ||  this.video.category == "") {
+      this.hasCategoryError = true
     }
 
     if (this.hasTitleError || this.hasDescError || this.hasFileError)

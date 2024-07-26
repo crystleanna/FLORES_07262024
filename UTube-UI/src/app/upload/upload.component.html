@@ -60,6 +60,9 @@
                                 <option selected>-</option>
                                 <option *ngFor="let category of categories" value="{{ category.categories }}">{{ category.categories }}</option>
                               </select>
+                            <div class="text-danger" *ngIf="hasCategoryError">
+                                Please select a category.
+                              </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-5 align-self-end mt-4">
                             <button type="button" class="btn btn-success" (click)="showNewCategoryDialog()">New Category</button>
