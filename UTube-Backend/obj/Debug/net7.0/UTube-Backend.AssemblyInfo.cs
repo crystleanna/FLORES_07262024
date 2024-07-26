@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UTube-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aef364a499b40cf77f39a8871b0f5ec4d9160ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd98741e307afff8ac98dcfff93ab8d46423fd11")]
 [assembly: System.Reflection.AssemblyProductAttribute("UTube-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UTube-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

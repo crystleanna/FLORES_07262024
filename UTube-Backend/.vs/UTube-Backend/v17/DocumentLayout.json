@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|c:\\users\\kn tech\\documents\\angular\\utube\\utube-backend\\controllers\\videoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|solutionrelative:controllers\\videoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|c:\\users\\kn tech\\documents\\angular\\utube\\utube-backend\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|c:\\users\\kn tech\\documents\\angular\\utube\\utube-backend\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|c:\\users\\kn tech\\documents\\angular\\utube\\utube-backend\\models\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|solutionrelative:models\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|c:\\users\\kn tech\\documents\\angular\\utube\\utube-backend\\controllers\\videoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|solutionrelative:controllers\\videoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99AAA2FB-7945-46CC-A0E2-7EEC111CB79D}|UTube-Backend.csproj|c:\\users\\kn tech\\documents\\angular\\utube\\utube-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +38,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 274,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Video.cs",
+              "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\Video.cs",
+              "RelativeDocumentMoniker": "Models\\Video.cs",
+              "ToolTip": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\Video.cs",
+              "RelativeToolTip": "Models\\Video.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T16:34:45.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T16:32:37.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T16:28:08.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -47,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "VideoPayload.cs",
               "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\VideoPayload.cs",
               "RelativeDocumentMoniker": "Models\\VideoPayload.cs",
@@ -60,20 +107,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "VideosController.cs",
               "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Controllers\\VideosController.cs",
               "RelativeDocumentMoniker": "Controllers\\VideosController.cs",
               "ToolTip": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Controllers\\VideosController.cs",
               "RelativeToolTip": "Controllers\\VideosController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowDUAAABWAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAYwC8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-26T13:58:23.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UTube-Backend",
               "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\UTube-Backend.csproj",
               "RelativeDocumentMoniker": "UTube-Backend.csproj",
@@ -82,25 +129,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-07-26T13:54:26.414Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 126,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Video.cs",
-              "DocumentMoniker": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\Video.cs",
-              "RelativeDocumentMoniker": "Models\\Video.cs",
-              "ToolTip": "C:\\Users\\KN Tech\\Documents\\Angular\\UTube\\UTube-Backend\\Models\\Video.cs",
-              "RelativeToolTip": "Models\\Video.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T14:35:44.906Z",
               "EditorCaption": ""
             }
           ]

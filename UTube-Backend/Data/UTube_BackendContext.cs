@@ -15,5 +15,7 @@ namespace UTube_Backend.Data
         }
 
         public DbSet<UTube_Backend.Models.Video> Video { get; set; } = default!;
+
+        public DbSet<UTube_Backend.Models.Category> Category { get; set; } = default!;
     }
 }
